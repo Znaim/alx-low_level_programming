@@ -1,8 +1,12 @@
 #include <stdio.h>
 
-init main(void)
+/**
+ * main - Entry point of the program
+ *
+ * Return: Always 0 (success)
+ */
+int main(void)
 {
-	puts("Programming is like building a multilingual puzzle);
+	printf("Programming is like building a multilingual puzzle\n");
 	return (0);
-
 }
