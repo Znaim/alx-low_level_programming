@@ -9,21 +9,27 @@
 int main(void)
 {
 	int n;
-	int lastDigit;
 
 	srand(time(0));
-	n = rand() % 100; /* Generate random number between 0 and 99 (inclusive) */
+	n = rand() - RAND_MAX / 2;
 
-	printf("Last digit of %d is ", n);
-
-	lastDigit = n % 10;
-
-	if (lastDigit > 5)
-		printf("%d and is greater than 5\n", lastDigit);
-	else if (lastDigit == 0)
-		printf("%d and is 0\n", lastDigit);
+	if ((n % 10) > 5)
+	{
+		printf("Last digit of %d is %d and is greater than 5\n",
+			n, n % 10);
+	}
+	else if ((n % 10) < 6 && (n % 10) != 0)
+	{
+		printf("Last digit of %d is %d and is less than 6 and not 0\n",
+			n, n % 10);
+	}
 	else
-		printf("%d and is less than 6 and not 0\n", lastDigit);
+	{
+		printf("Last digit of %d is %d and is 0\n",
+			n, n % 10);
+	}
 
 	return (0);
+
 }
+
