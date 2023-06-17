@@ -2,20 +2,21 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - Determines if a number is greater than 5 or zero or less than 6 and not 0
+ * main - Determines if a number is greater than  or zero or less than  and not
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
 	int n;
+	int lastDigit;
 
 	srand(time(0));
 	n = rand();
 
 	printf("Last digit of %d is ", n);
 
-	int lastDigit = n % 10;
+	lastDigit = n % 10;
 
 	if (lastDigit > 5)
 	{
